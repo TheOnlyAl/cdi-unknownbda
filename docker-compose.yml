@@ -1,0 +1,11 @@
+services:
+  payara:
+    restart: unless-stopped
+    image: payara/server-full:6.2025.2-jdk17
+    environment:
+          PAYARA_ARGS: "--debug"
+    ports:
+      - "8080:8080"
+      - "8181:8181"
+      - "4848:4848"
+      - "9009:9009"
